@@ -414,6 +414,7 @@ a.top:before {
   padding: 30px;
   padding-top: 40px;
   text-align: center;
+  z-index: 999;
 }
 
 #what-are-badges #hands {
