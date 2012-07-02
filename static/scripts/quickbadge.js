@@ -33,8 +33,6 @@ var QuickBadge = (function() {
         if (!assertion.badge.issuer[field])
           throw new Error("Missing field: badge.issuer." + field);
       });
-      if (!validateEmail(assertion.recipient))
-        throw new Error("invalid recipient");
       jQuery.ajax({
         type: 'POST',
         url: options.service,

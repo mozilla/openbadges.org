@@ -211,7 +211,7 @@
     width: 168px;
   }
 
-  #badges-101 #final #navigator {
+  #badges-101 #final .navigator {
     background: url('/img/index/navigatorbadge.png') no-repeat scroll center top transparent;
     display: block;
     padding-top: 90px;
