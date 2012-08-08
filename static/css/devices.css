@@ -21,7 +21,7 @@ a:focus,
 a:active {
     text-decoration: underline;
 }
-aside {
+aside, footer {
     position: relative;
 }
 .box {
