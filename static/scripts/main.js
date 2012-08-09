@@ -20,7 +20,13 @@
     });
     $('.fancybox').fancybox({
       closeBtn: true,
-      arrows: false
+      arrows: false,
+      afterShow: function(){
+	      $("#badges-101").attr("aria-hidden", false).attr("tabindex", 0);
+	      $('#slides :visible').focus();
+	      
+      },
+      afterClose: function(){},
     });
   });
 
