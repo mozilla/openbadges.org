@@ -6,6 +6,10 @@
 <script src="/scripts/localize.js"></script>
 <script src="qunit.js"></script>
 <script src="tests.js"></script>
+<script>
+if (location.search.match(/externalreporter=1/))
+  document.write('<script src="/externalreporter.js"></' + 'script>');
+</script>
 <h1 id="qunit-header">openbadges.org Unit Tests</h1>
 <h2 id="qunit-banner"></h2>
 <div id="qunit-testrunner-toolbar"></div>
