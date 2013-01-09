@@ -44,10 +44,11 @@
       var email = $(this).find("input#email").val().trim();
       if (QuickBadge.validateEmail(email)) {
         var baseURI = $('<a href="./"></a>')[0].href;
+        var hashedEmail = 'sha256$' + sha256_digest(email);
         var publish = QuickBadge.publish({
           service: "http://hackpub.hackasaurus.org/publish",
           assertion: {
-            "recipient": email,
+            "recipient": hashedEmail,
             "badge": {
               "version": "0.0.1",
               "name": "Badges 101",
