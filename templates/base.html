@@ -12,7 +12,8 @@
         <link rel="stylesheet" href="/css/desktop.css" />
     <![endif]-->
     {% block head %} {% endblock %}
-    <script type="text/javascript">
+    {% if PRODUCTION %}
+      <script type="text/javascript">
         var _gaq = _gaq || [];
         _gaq.push(['_setAccount', 'UA-35433268-10']);
         _gaq.push(['_setDomainName', 'openbadges.org']);
@@ -22,7 +23,8 @@
             ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
         })();
-    </script>
+      </script>
+    {% endif %}
 </head>
 <body>
     <script>
