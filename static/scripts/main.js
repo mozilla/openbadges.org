@@ -50,19 +50,15 @@
           assertion: {
             "recipient": hashedEmail,
             "badge": {
-              "version": "0.0.1",
+              "version": "0.5.0",
               "name": "Badges 101",
               "image": $("#badges101")[0].src,
               "description": "You really get badges!",
-              "criteria": baseURI,
+              "criteria": "http://badges-101.openbadges.org/",
               "issuer": {
-                // TODO: The 'origin' isn't checked right now,
-                // so we will take advantage of this to use an
-                // authoritative domain that's good for
-                // demo purposes.
-                "origin": "http://badges-101.openbadges.org/",
+                "origin": "http://www.openbadges.org",
                 "name": "Open Badges",
-                "org": "Experimental Badge Authority",
+                "org": "Mozilla Foundation",
                 "contact": "hai2u@openbadges.org"
               }
             }
