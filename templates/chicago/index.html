@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block page_id %}chicago{% endblock %}
+{% block head %}
+  <style>
+    #content section:first-child {
+      background: url(/img/chicago-badge.png) no-repeat top right;
+      background-size: 200px;
+      padding-top: 120px;
+      margin-top: -80px;
+    }
+    .fn:link,
+    .fn:visited,
+    .fn:hover,
+    .fn:active {
+      color: #656565; 
+    }
+    aside:target {
+      background: #C3E4ED;
+    }
+  </style>
+{% endblock %}
+{% block content %}
+  <header>
+    <h1>Chicago Badges</h1>
+    <h2 class="subheader">City of Chicago Summer of Learning</h2>
+  </header>
+
+  <section id="content" class="chunked">
+    <section>
+      <h3>Please submit your badge ideas for the Summer of Learning.</h3>
+      <p>
+        Please submit your ideas for badges for your organization through this form. We are encouraging each organization to submit 1-5 badges<a href="#five" class="fn">*</a> that align with the learning experiences in your summer program. We will review your submissions and contact you to finalize. Contact us with questions: <a href="mailto:support@openbadges.org">support@openbadges.org</a>. 
+      </p>
+    </section>
+    <section>
+      <iframe src="https://docs.google.com/forms/d/1Cex8MMFAMeSLkd8YAJnxxA6jR-12v8IFGsHotz_j4wU/viewform" width="900" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+    </section>
+    <section>
+      <aside id="five">
+        * If you would like to have more than 5 badges for your program, we can help. 
+        Please let us know: <a href="mailto:support@openbadges.org">support@openbadges.org</a>
+      </aside>
+    </section>
+  </section>
+{% endblock %}

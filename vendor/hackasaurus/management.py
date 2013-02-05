@@ -35,6 +35,8 @@ def execute_manager(build_dir, static_files_dir, template_dir,
     def cmd_build(args):
         "build static site"
 
+        template_vars['PRODUCTION'] = args.production
+
         tinysite.export_site(
             build_dir=build_dir,
             static_files_dir=static_files_dir,
@@ -62,6 +64,8 @@ def execute_manager(build_dir, static_files_dir, template_dir,
     parser = argparse.ArgumentParser()
     subparsers = parser.add_subparsers()
     build = subparsers.add_parser('build', help=cmd_build.__doc__)
+    build.add_argument('--production', help='build for production environment', 
+                       action='store_true');
     build.set_defaults(func=cmd_build)
     makemessages = subparsers.add_parser('makemessages', 
                                          help=cmd_makemessages.__doc__)
