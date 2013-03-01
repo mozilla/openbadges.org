@@ -86,8 +86,10 @@ echo '</div>'; // .content
 
 if ($avatar) {
 	$bubble = get_post_meta($post->ID, 'page_avatar_text', true);
+	$class = array('avatar', $avatar);
+	if ($bubble) $class[] = 'has-bubble';
 
-	echo '<div class="avatar '.$avatar.'">';
+	echo '<div class="'.implode(' ', $class).'">';
 	echo '<span class="badge"></span>';
 	if ($bubble) {
 		echo '<div class="bubble"><div class="inner">'.$bubble.'</div></div>';
