@@ -140,6 +140,30 @@
 }
 
 /* ===[ Boris ]============================================================== */
+.avatar.boris {
+	height: 354px;
+	background-image: url(../images/avatars/boris_body.png);
+}
+
+.avatar.boris .badge {
+	width: 127px;
+	height: 116px;
+	background: url(../images/avatars/boris_hands.png);
+	position: absolute;
+	left: 53px;
+	top: 106px;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+.avatar.boris:hover .badge {
+	top: 103px;
+	-webkit-transition: all 0.1s ease-in;
+	-moz-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in;
+}
+
 /* ===[ Dorothy ]============================================================ */
 /* ===[ Gladis ]============================================================= */
 .avatar.gladis {
