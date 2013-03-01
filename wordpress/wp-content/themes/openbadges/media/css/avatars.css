@@ -168,7 +168,8 @@
 .avatar.dorothy {
 	height: 385px;
 	background-image: url(../images/avatars/dorothy_body.png);
-	padding-top: 120px;
+	padding-top: 60px;
+	background-position: 0 100%;
 }
 
 .avatar.dorothy .badge {
