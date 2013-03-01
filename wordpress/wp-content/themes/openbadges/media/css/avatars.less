@@ -167,3 +167,42 @@
 
 /* ===[ Morty ]============================================================== */
 
+.avatar.morty {
+	height: 334px;
+	padding-top: 60px;
+	background-image: url(../images/avatars/morty_body.png);
+	background-position: 100% 100%;
+
+	.badge {
+		width: 113px;
+		height: 119px;
+		background: url(../images/avatars/morty_hands.png);
+		position: absolute;
+		left: -5px;
+		top: 200px;
+		-webkit-transition: all 0.2s ease-out;
+		-moz-transition: all 0.2s ease-out;
+		transition: all 0.2s ease-out;
+		-webkit-transform-origin: top center;
+		-moz-transform-origin: top center;
+		transform-origin: top center;
+	}
+
+	&:hover {
+		.badge {
+			-webkit-transform: rotate(3deg);
+			-moz-transform: rotate(3deg);
+			transform: rotate(3deg);
+			-webkit-transition: all 0.1s ease-in;
+			-moz-transition: all 0.1s ease-in;
+			transition: all 0.1s ease-in;
+		}
+	}
+
+	.bubble {
+		top: 0px;
+		-webkit-transform: rotate(-15deg);
+		-moz-transform: rotate(-15deg);
+		transform: rotate(-15deg);
+	}
+}
