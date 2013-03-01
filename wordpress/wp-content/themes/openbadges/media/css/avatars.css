@@ -165,6 +165,40 @@
 }
 
 /* ===[ Dorothy ]============================================================ */
+.avatar.dorothy {
+	height: 385px;
+	background-image: url(../images/avatars/dorothy_body.png);
+	padding-top: 120px;
+}
+
+.avatar.dorothy .badge {
+	width: 124px;
+	height: 129px;
+	background: url(../images/avatars/dorothy_hands.png);
+	position: absolute;
+	left: 82px;
+	top: 0;
+	-webkit-transition: all 0.2s ease-out;
+	-moz-transition: all 0.2s ease-out;
+	transition: all 0.2s ease-out;
+}
+
+.avatar.dorothy:hover .badge {
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	transform: rotate(3deg);
+	-webkit-transition: all 0.1s ease-in;
+	-moz-transition: all 0.1s ease-in;
+	transition: all 0.1s ease-in;
+}
+
+.avatar.dorothy .bubble {
+	top: 65px;
+	-webkit-transform: rotate(-15deg);
+	-moz-transform: rotate(-15deg);
+	transform: rotate(-15deg);
+}
+
 /* ===[ Gladis ]============================================================= */
 .avatar.gladis {
 	height: 359px;
