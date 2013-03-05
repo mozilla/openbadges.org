@@ -209,6 +209,7 @@ a:active {
 #content {
 	padding: 0.625em 0 50px;
 	color: #656565;
+	min-height: 15em;
 }
 
 #content article {

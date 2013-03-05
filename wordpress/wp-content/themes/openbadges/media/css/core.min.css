@@ -14,7 +14,7 @@ a:hover,a:active{text-decoration:underline;}
 #header h1{margin:0;font-weight:normal;}#header h1 .logo{display:block;font-family:"Bebas-Neue";background:url(../images/mozilla-logo.png) 0 0 no-repeat;font-size:54px;line-height:48px;padding-top:22px;margin:6px 75px 0 0;float:left;text-decoration:none;color:#444;}
 #header .menu{font:normal 12px Arial,Helvetica,sans-serif;overflow:hidden;margin:21px 0 0 -1em;padding:0;float:left;list-style:none;}#header .menu li{float:left;border-left:solid 1px #686868;}#header .menu li:first-child{border-left:none;padding-left:0;}
 #header .menu a{padding:1em;display:block;text-transform:uppercase;color:#333;}
-#content{padding:0.625em 0 50px;color:#656565;}#content article{padding-right:250px;overflow:hidden;}
+#content{padding:0.625em 0 50px;color:#656565;min-height:15em;}#content article{padding-right:250px;overflow:hidden;}
 #content section{position:relative;border-top:dashed 2px #F7B137;padding:30px 250px 30px 0;margin:0 -250px 20px 0;}#content section.first{border-top:none;padding-top:0;}
 #content section.no-top a.top{display:none;}
 #content .content{float:left;width:100%;}
