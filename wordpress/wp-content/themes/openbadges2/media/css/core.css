@@ -330,6 +330,7 @@ h4 {
 	.panel img {
 	  float: left;
 	  margin-left: -300px;
+	  max-width: 300px;
 	}
 
 	.panel p {
@@ -344,6 +345,7 @@ h4 {
 	}
 
 	.panel img {
+	  max-width: 100%;
 	  float: none;
 	  margin: 0;
 	}
