@@ -159,12 +159,32 @@ add_action('style_loader_tag', 'openbadges_clean_tag', 1);
 
 
 /*
+ * Set up widgets
+ */
+
+function openbadges_setup_widgets () {
+	register_sidebar(array(
+		'name' => __('Footer', 'openbadges'),
+		'id' => 'footer',
+		'description' => __('Appears at the bottom of every page', 'openbadges'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget' => '</section>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
+	));
+}
+
+add_action('widgets_init', 'openbadges_setup_widgets');
+
+
+/*
  * Set up menus
  */
 
 function openbadges_setup_menus () {
 	register_nav_menus(array(
 		'primary' => __('Main Menu', 'openbadges'),
+		'footer' => __('Secondary Footer Menu', 'openbadges'),
 	));
 }
 
