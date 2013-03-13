@@ -555,6 +555,7 @@ ol.promo-list p {
 	background-image: -ms-linear-gradient(left, rgba(255,255,255,0.015), rgba(255,255,255,0.015) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0));
 	background-image: linear-gradient(left, rgba(255,255,255,0.015), rgba(255,255,255,0.015) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0));
 	background-size: 10px 10px;
+	background-position: 50% 50%;
 	min-height: 200px;
 	position: relative;
 }
