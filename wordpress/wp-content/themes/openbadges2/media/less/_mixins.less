@@ -9,3 +9,10 @@
 	-moz-box-sizing: @sizing;
 	box-sizing: @sizing;
 }
+
+.linear-gradient (@defn) {
+	background-image: -webkit-linear-gradient(@defn);
+	background-image: -moz-linear-gradient(@defn);
+	background-image: -ms-linear-gradient(@defn);
+	background-image: linear-gradient(@defn);
+}

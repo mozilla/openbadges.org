@@ -1,4 +1,5 @@
 @import "_variables";
+@import "_mixins";
 
 /* ---[ Panels ]------------------------------------------------------------- */
 
@@ -246,5 +247,103 @@ ul, ol {
 
 	&:after {
 		content: ' ❯';
+	}
+}
+
+/* ---[ Meta ]--------------------------------------------------------------- */
+
+#meta {
+	background: #323538;
+	.linear-gradient(~"left, rgba(255,255,255,0.015), rgba(255,255,255,0.015) 50%, rgba(255,255,255,0) 50%, rgba(255,255,255,0)");
+	background-size: 10px 10px;
+	min-height: 200px;
+	position: relative;
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		left: 0;
+		width: 100%;
+		height: @striped-border-size;
+	}
+
+	&::before {
+		top: 0;
+		background-image: -webkit-gradient(linear, top left, bottom left, from(rgba(0,0,0,0.33)), to(rgba(0,0,0,0)));
+		.linear-gradient(~"top, rgba(0,0,0,0.33), rgba(0,0,0,0)");
+	}
+
+	&::after {
+		bottom: 0;
+		background-image: -webkit-gradient(linear, bottom left, top left, from(rgba(0,0,0,0.33)), to(rgba(0,0,0,0)));
+		.linear-gradient(~"bottom, rgba(0,0,0,0.33), rgba(0,0,0,0)");
+	}
+
+	.constrained {
+		max-width: 920px;
+		padding: 0;
+		overflow: hidden;
+	}
+
+	section {
+		width: 33.33%;
+		float: left;
+		padding: 2em 10px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		position: relative;
+	}
+
+	h2 {
+		font-family: @normal-font;
+		color: #9C9C9C;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: bold;
+		margin: 0;
+		padding: 35px 0 0;
+	}
+
+	i {
+		position: absolute;
+		top: 2em;
+		left: 0;
+		height: 35px;
+		width: 100%;
+		background: url(../images/aside-icons.png) no-repeat 10px 100%;
+
+		&.tweet {
+			background-position: 10px -145px;
+		}
+
+		&.learn {
+			background-position: 10px -445px;
+		}
+
+		&.mozilla {
+			background-position: 10px -295px;
+		}
+	}
+
+	p, ul {
+		margin: 1em 0 0;
+		padding: 0;
+		list-style: none;
+		font-size: 14px;
+	}
+
+	li {
+		list-style-type: none;
+		border-top: solid 1px #656565;
+		padding: 0.5em 0 0;
+		margin: 0.5em 0 0;
+
+		&:first-child {
+			border-top: none;
+			padding: 0;
+			margin: 0;
+		}
 	}
 }

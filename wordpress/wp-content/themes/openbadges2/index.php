@@ -4,7 +4,7 @@ function add_body_classes($classes) {
 	global $post;
 
 	$extra = array();
-	if (!!get_post_meta($post->ID, 'embellish_page', false)) {
+	if (!!get_post_meta($post->ID, 'embellish_page', true)) {
 		$extra[] = 'embellished';
 	}
 
