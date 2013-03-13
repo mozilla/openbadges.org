@@ -9,6 +9,7 @@ function get_title_alignments () {
 		'left' => 'Left',
 		'center' => 'Center',
 		'right' => 'Right',
+		'hidden' => 'Hidden',
 	);
 }
 
@@ -16,9 +17,10 @@ function openbadges_page_attributes_meta_box ($post) {
 	if ('page' == $post->post_type) {
 		$title_alignment = get_post_meta($post->ID, 'title_alignment', true);
 		$embellished = !!get_post_meta($post->ID, 'embellish_page', true);
+		$hide_meta = get_post_meta($post->ID, 'hide_meta', true);
 		?>
 		<p><strong><?php _e('Title Alignment') ?></strong></p>
-		<label class="screen-reader-text" for="title_alignment"><?php _e('Title Alignment'); ?></label>
+		<label class="screen-reader-text" for="title_alignment"><?php _e('Title Placement'); ?></label>
 		<select name="title_alignment" id="title_alignment">
 			<option value=""><?php _e('(default)'); ?></option>
 			<?php
@@ -30,6 +32,9 @@ function openbadges_page_attributes_meta_box ($post) {
 		<p><strong><?php _e('Embellishment') ?></strong></p>
 		<input type="checkbox" name="embellish_page" id="embellish_page"<?php if ($embellished): ?> checked="checked"<?php endif; ?> value="1">
 			<label for="embellish_page">Show Open Badges logo at bottom</label>
+		<p><strong><?php _e('Meta Block') ?></strong></p>
+		<input type="checkbox" name="hide_meta" id="hide_meta"<?php if ($hide_meta): ?> checked="checked"<?php endif; ?> value="1">
+			<label for="hide_meta">Hide global meta block</label>
 		<?php
 	}
 	page_attributes_meta_box($post);
@@ -53,6 +58,12 @@ function openbadges_save_embellishment ($post_id) {
 		update_post_meta($post_id, 'embellish_page', true);
 	} else {
 		delete_post_meta($post_id, 'embellish_page');
+	}
+
+	if (isset($_POST['hide_meta']) && !!$_POST['hide_meta']) {
+		update_post_meta($post_id, 'hide_meta', true);
+	} else {
+		delete_post_meta($post_id, 'hide_meta');
 	}
 }
 
