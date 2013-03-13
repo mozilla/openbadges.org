@@ -655,3 +655,18 @@ ol.promo-list p {
 	margin: 0;
 }
 
+@media all and (max-width: 800px) {
+	#meta {
+	  padding-bottom: 2em;
+	}
+
+	#meta section {
+	  float: none;
+	  width: auto;
+	  max-width: 400px;
+	  margin: 0 auto;
+	  padding-bottom: 0;
+	}
+
+}
+

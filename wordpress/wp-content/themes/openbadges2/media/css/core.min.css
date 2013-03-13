@@ -57,3 +57,4 @@ ul.promo-list h3,ol.promo-list h3,ul.promo-list h4,ol.promo-list h4,ul.promo-lis
 #meta i.mozilla{background-position:10px -295px;}
 #meta p,#meta ul{margin:1em 0 0;padding:0;list-style:none;font-size:14px;}
 #meta li{list-style-type:none;border-top:solid 1px #656565;padding:0.5em 0 0;margin:0.5em 0 0;}#meta li:first-child{border-top:none;padding:0;margin:0;}
+@media all and (max-width:800px){#meta{padding-bottom:2em;}#meta section{float:none;width:auto;max-width:400px;margin:0 auto;padding-bottom:0;}}
