@@ -51,64 +51,62 @@
 	}
 }
 
-/* ---[ List Columns ]------------------------------------------------------- */
+/* ---[ Columns ]------------------------------------------------------------ */
 
-ul, ol {
-	&.two-col,
-	&.three-col {
-		overflow: hidden;
-		margin: 25px 0 0 -@content-gutter;
+.two-column,
+.three-column {
+	overflow: hidden;
+	margin: 25px 0 0 -@content-gutter;
+	padding: 0;
+	list-style: none;
+
+	.column {
+		float: left;
+		width: 50%;
+		margin: 0;
 		padding: 0;
-		list-style: none;
+		border-left: solid @content-gutter transparent;
+		.box-sizing(border-box);
+	}
+}
 
-		li {
-			float: left;
-			width: 50%;
-			margin: 0;
-			padding: 0;
-			border-left: solid @content-gutter transparent;
-			.box-sizing(border-box);
+.two-column {
+	.column {
+		&:nth-child(odd) {
+			clear: both;
 		}
 	}
+}
 
-	&.two-col {
-		li {
-			&:nth-child(odd) {
-				clear: both;
-			}
-		}
-	}
+.three-column {
+	.column {
+		width: 33.33%;
 
-	&.three-col {
-		li {
-			width: 33.33%;
+		&:nth-child(3n+1) {
+			clear: both;
 		}
 	}
 }
 
 @media all and (max-width: 1000px) {
-	ul, ol {
-		&.three-col {
-			li {
-				float: none;
-				width: auto;
-				margin-bottom: 25px;
-			}
+	.three-column {
+		.column {
+			float: none;
+			width: auto;
+			margin-bottom: 25px;
 		}
 	}
 }
 
 @media all and (max-width: @small-screen-cutoff) {
-	ul, ol {
-		&.two-col,
-		&.three-col {
-			margin-left: -@tiny-content-gutter;
+	.two-column,
+	.three-column {
+		margin-left: -@tiny-content-gutter;
 
-			li {
-				float: none;
-				width: auto;
-				border-left-width: @tiny-content-gutter;
-			}
+		.column {
+			float: none;
+			width: auto;
+			border-left-width: @tiny-content-gutter;
 		}
 	}
 }
@@ -117,7 +115,10 @@ ul, ol {
 
 ul, ol {
 	&.promo-list {
-		li {
+		list-style: none;
+		padding: 0;
+
+		li, .column {
 			margin-top: 2.4em;
 			padding: 0 25px 0 80px;
 			background: url("../images/badge-bullet.png") 25px 0 no-repeat;

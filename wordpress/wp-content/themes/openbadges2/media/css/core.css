@@ -44,6 +44,7 @@ h3,
 h4 {
 	font-weight: normal;
 	margin: 2em 0 1em;
+	clear: both;
 }
 
 h2 {
@@ -371,21 +372,17 @@ h4 {
 
 }
 
-/* ---[ List Columns ]------------------------------------------------------- */
-ul.two-col,
-ol.two-col,
-ul.three-col,
-ol.three-col {
+/* ---[ Columns ]------------------------------------------------------------ */
+.two-column,
+.three-column {
 	overflow: hidden;
 	margin: 25px 0 0 -25px;
 	padding: 0;
 	list-style: none;
 }
 
-ul.two-col li,
-ol.two-col li,
-ul.three-col li,
-ol.three-col li {
+.two-column .column,
+.three-column .column {
 	float: left;
 	width: 50%;
 	margin: 0;
@@ -396,19 +393,20 @@ ol.three-col li {
 	box-sizing: border-box;
 }
 
-ul.two-col li:nth-child(odd),
-ol.two-col li:nth-child(odd) {
+.two-column .column:nth-child(odd) {
 	clear: both;
 }
 
-ul.three-col li,
-ol.three-col li {
+.three-column .column {
 	width: 33.33%;
 }
 
+.three-column .column:nth-child(3n+1) {
+	clear: both;
+}
+
 @media all and (max-width: 1000px) {
-	ul.three-col li,
-	ol.three-col li {
+	.three-column .column {
 	  float: none;
 	  width: auto;
 	  margin-bottom: 25px;
@@ -417,17 +415,13 @@ ol.three-col li {
 }
 
 @media all and (max-width: 740px) {
-	ul.two-col,
-	ol.two-col,
-	ul.three-col,
-	ol.three-col {
+	.two-column,
+	.three-column {
 	  margin-left: -10px;
 	}
 
-	ul.two-col li,
-	ol.two-col li,
-	ul.three-col li,
-	ol.three-col li {
+	.two-column .column,
+	.three-column .column {
 	  float: none;
 	  width: auto;
 	  border-left-width: 10px;
@@ -436,8 +430,16 @@ ol.three-col li {
 }
 
 /* ---[ Promo Lists ]-------------------------------------------------------- */
+ul.promo-list,
+ol.promo-list {
+	list-style: none;
+	padding: 0;
+}
+
 ul.promo-list li,
-ol.promo-list li {
+ol.promo-list li,
+ul.promo-list .column,
+ol.promo-list .column {
 	margin-top: 2.4em;
 	padding: 0 25px 0 80px;
 	background: url("../images/badge-bullet.png") 25px 0 no-repeat;
