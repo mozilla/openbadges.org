@@ -178,12 +178,19 @@
 	content: "";
 }
 
-#nav-panel {
+#nav-panel,
+#after-badge {
 	overflow: hidden;
 	text-align: center;
 }
 
-#nav-panel .backpack {
+#nav-panel p,
+#after-badge p {
+	margin-top: 0;
+}
+
+#nav-panel .backpack,
+#after-badge .backpack {
 	display: block;
 	float: left;
 	width: 38%;
@@ -192,7 +199,8 @@
 	background: url("../images/quiz/backpack.png") 50% 0 no-repeat;
 }
 
-#nav-panel .navigator {
+#nav-panel .navigator,
+#after-badge .navigator {
 	display: block;
 	float: right;
 	width: 38%;

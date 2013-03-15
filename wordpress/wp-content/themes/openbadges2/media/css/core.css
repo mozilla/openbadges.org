@@ -243,11 +243,12 @@ h4 {
 
 #footer .support {
 	height: 80px;
-	line-height: 80px;
+	line-height: 20px;
 	padding-top: 0;
 }
 
 #footer .support img {
+	margin-top: -35px;
 	height: 80px;
 	vertical-align: middle;
 	display: inline-block;
@@ -259,6 +260,11 @@ h4 {
 #footer nav {
 	float: right;
 	margin-top: -45px;
+}
+
+#header nav.secondary,
+#footer nav.secondary {
+	margin-top: -60px;
 }
 
 #header nav ul,
