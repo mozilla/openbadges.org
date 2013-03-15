@@ -289,6 +289,11 @@ h4 {
 	  margin: 0;
 	}
 
+	#header nav.secondary,
+	#footer nav.secondary {
+	  margin-top: -35px;
+	}
+
 	#header nav ul,
 	#footer nav ul {
 	  overflow: hidden;

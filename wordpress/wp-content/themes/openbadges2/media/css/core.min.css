@@ -32,7 +32,7 @@ h4{color:#5fc9e5;}
 #header nav,#footer nav{float:right;margin-top:-45px;}#header nav.secondary,#footer nav.secondary{margin-top:-60px;}
 #header nav ul,#footer nav ul{margin:-1em 0 0;padding:0;list-style:none;line-height:1em;}
 #header nav li,#footer nav li{float:left;margin-left:1.5em;}
-@media all and (max-width:1000px){#header nav,#footer nav{float:none;clear:both;margin:0;}#header nav ul,#footer nav ul{overflow:hidden;text-align:center;line-height:1.5em;padding-bottom:1.5em;} #header nav li,#footer nav li{float:none;display:inline-block;margin:0 0.75em;}}#content{min-height:300px;padding:5px 0 100px;background:#182d39 50% 100% no-repeat;}
+@media all and (max-width:1000px){#header nav,#footer nav{float:none;clear:both;margin:0;}#header nav.secondary,#footer nav.secondary{margin-top:-35px;} #header nav ul,#footer nav ul{overflow:hidden;text-align:center;line-height:1.5em;padding-bottom:1.5em;} #header nav li,#footer nav li{float:none;display:inline-block;margin:0 0.75em;}}#content{min-height:300px;padding:5px 0 100px;background:#182d39 50% 100% no-repeat;}
 .embellished #content{background-image:url("../images/content-background.png");border-bottom:solid 40px transparent;padding-bottom:275px;}
 .narrow #content .constrained{max-width:34em;}
 .panel{display:block;padding:25px 0 40px;background:#213441;-webkit-border-radius:8px;-moz-border-radius:8px;border-radius:8px;text-decoration:none;overflow:hidden;text-align:center;color:inherit;}.panel img{max-width:100%;}
