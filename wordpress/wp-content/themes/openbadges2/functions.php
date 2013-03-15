@@ -80,7 +80,8 @@ function openbadges_scripts () {
 		'slides' => array('src'=>$local.'/jquery.slides.min.js', 'dependencies'=>array('jquery')),
 		'quickbadge' => array('src'=>$local.'/quickbadge.js'),
 		'sha256' => array('src'=>$local.'/sha256.js'),
-		'badges-101' => array('src'=>$local.'/badges-101.js', 'dependencies'=>array('fancybox','slides','quickbadge','sha256')),
+		'issuer' => array('src'=>"http://beta.openbadges.org/issuer.js"),
+		'badges-101' => array('src'=>$local.'/badges-101.js', 'dependencies'=>array('fancybox','slides','quickbadge','sha256','issuer')),
 	);
 
 	foreach ($scripts as $script => $config) {
