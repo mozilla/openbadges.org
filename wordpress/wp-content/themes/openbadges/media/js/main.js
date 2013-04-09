@@ -1,4 +1,4 @@
-(function(){
+(function($){
   $(document).ready(function(){
     /* Cheating takes you straight to the win panel 
        when you 'get started' in the UI 
@@ -43,6 +43,7 @@
     $("#get-badge form").submit(function() {
       var email = $(this).find("input#email").val().trim();
       if (QuickBadge.validateEmail(email)) {
+        var baseURI = $('<a href="./"></a>')[0].href;
         var hashedEmail = 'sha256$' + sha256_digest(email);
         var publish = QuickBadge.publish({
           service: "http://hackpub.hackasaurus.org/publish",
@@ -96,4 +97,4 @@
     $('#incomplete').hide();
     $('#win').show();
   }
-})();
+})(jQuery);

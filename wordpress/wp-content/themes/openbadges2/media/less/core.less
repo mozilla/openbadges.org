@@ -1,0 +1,257 @@
+// Target: ../css/$.css
+
+@import "_variables";
+@import "_mixins";
+
+/* ===[ Fonts ]============================================================== */
+
+@import "_fonts";
+
+/* ===[ Reset ]============================================================== */
+
+@import "_reset";
+
+/* ===[ Core ]=============================================================== */
+
+body {
+	background: @footer-background;
+	font-family: @light-font;
+	font-size: @base-font-size;
+	color: #F0F0F0;
+}
+
+h4 {
+	color: @pale-blue;
+}
+
+.constrained {
+	max-width: @content-width;
+	padding: 0 @content-gutter;
+	margin: 0 auto;
+}
+
+@media all and (max-width: @tiny-screen-cutoff) {
+	.constrained {
+		padding: 0 @tiny-content-gutter;
+	}
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.text-hidden {
+	position: absolute;
+	left: -999em;
+}
+
+.intro {
+	font-size: 1.5em;
+	margin: -0.75em 0 0;
+}
+
+.tagline {
+	font-size: 1.5em;
+	margin: -2em 0 0;
+	font-style: italic;
+}
+
+.reduced {
+	font-size: 0.78em;
+}
+
+/* ===[ Header/Footer ]====================================================== */
+
+#header {
+	background: @header-background;
+	border-top: solid 2px #FFF;
+	border-bottom: solid @striped-border-size @ob-blue;
+	position: relative;
+
+	a {
+		color: #073A5A;
+	}
+}
+
+#footer {
+	position: relative;
+	border-top: solid @striped-border-size @ob-blue;
+	padding: 20px 0;
+
+	a {
+		color: inherit;
+	}
+}
+
+#header, #footer {
+	.constrained {
+		overflow: hidden;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}
+
+#header::before,
+#header::after,
+#footer::before,
+#footer::after {
+	content: "";
+	height: @striped-border-size;
+	width: 33.33%;
+	position: absolute;
+	left: 33.33%;
+	background: @ob-green;
+}
+
+#header::before,
+#header::after {
+	bottom: -@striped-border-size;
+}
+
+#footer::before,
+#footer::after {
+	top: -@striped-border-size;
+}
+
+#header::after,
+#footer::after {
+	left: 66.66%;
+	background: @ob-orange;
+}
+
+/* ---[ Etc. ]--------------------------------------------------------------- */
+
+#tabzilla {
+	margin-top: -28px;
+
+	// Remove this lot later
+/*	float: right;
+	display: block;
+	background: rgba(255,255,255,0.75);
+	height: 44px;
+	width: 150px;
+	position: relative;
+	text-indent: -2000px;
+	overflow: hidden;
+	z-index: 999;
+*/}
+
+#header h1,
+#footer .footnote,
+#footer .support {
+	margin: 0;
+	padding: 28px 0;
+}
+
+#home,
+#footer .footnote a {
+	display: block;
+	width: 300px;
+	height: 80px;
+	background: url("../images/logo.png");
+	text-indent: -100%;
+	overflow: hidden;
+	margin-left: -14px;
+}
+
+#footer .footnote a {
+	background-position: 0 -80px;
+}
+
+#footer .support {
+	height: 80px;
+	line-height: 20px;
+	padding-top: 0;
+
+	img {
+		margin-top: -35px;
+		height: 80px;
+		vertical-align: middle;
+		display: inline-block;
+		margin-left: 1em;
+	}
+}
+
+/* ---[ Navigation ]--------------------------------------------------------- */
+
+#header, #footer {
+	nav {
+		float: right;
+		margin-top: -45px;
+
+		&.secondary {
+			margin-top: -60px;
+		}
+
+		ul {
+			margin: -1em 0 0;
+			padding: 0;
+			list-style: none;
+			line-height: 1em;
+		}
+
+		li {
+			float: left;
+			margin-left: 1.5em;
+		}
+	}
+}
+
+@media all and (max-width: @full-content-width) {
+	#header, #footer {
+		nav {
+			float: none;
+			clear: both;
+			margin: 0;
+
+			&.secondary {
+				margin-top: -35px;
+			}
+
+			ul {
+				overflow: hidden;
+				text-align: center;
+				line-height: 1.5em;
+				padding-bottom: 1.5em;
+			}
+
+			li {
+				float: none;
+				display: inline-block;
+				margin: 0 0.75em;
+			}
+		}
+	}
+}
+
+/* ===[ Main Content ]======================================================= */
+
+#content {
+	min-height: 300px;
+	padding: 5px 0 100px;
+	background: @main-background 50% 100% no-repeat;
+}
+
+.embellished #content {
+	background-image: url("../images/content-background.png");
+	border-bottom: solid 40px transparent;
+	padding-bottom: 275px;
+}
+
+.narrow #content .constrained {
+	max-width: 34em;
+}
+
+/* ===[ Components ]========================================================= */
+
+@import "_components";
