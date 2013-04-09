@@ -1,0 +1,60 @@
+@import "_variables";
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+a,
+label.link {
+	color: @ob-green;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+h2,
+h3,
+h4 {
+	font-weight: normal;
+	margin: 2em 0 1em;
+	clear: both;
+}
+
+h2 {
+	font-size: 2.75em;
+}
+
+h3 {
+	font-size: 1.95em;
+}
+
+h4 {
+	font-size: 1.2em;
+}
+
+p {
+	font-size: 1em;
+	margin: 1.5em 0 0;
+	line-height: 1.5em;
+}
+
+input {
+	font: inherit;
+}
+
+@media all and (max-width: @small-screen-cutoff) {
+	h2 {
+		margin-top: 1em;
+	}
+}
+
+@media all and (max-width: @tiny-screen-cutoff) {
+	h2 {
+		font-size: 1.95em;
+	}
+
+	h3 {
+		font-size: 1.55em;
+	}
+}
