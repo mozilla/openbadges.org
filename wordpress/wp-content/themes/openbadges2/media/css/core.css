@@ -364,6 +364,13 @@ h4 {
 	  max-width: 300px;
 	}
 
+	.panel h1,
+	.panel h2,
+	.panel h3,
+	.panel h4 {
+	  clear: none;
+	}
+
 	.panel p {
 	  margin: 15px 20px 0;
 	}
