@@ -20,5 +20,5 @@
 			</div> <!-- .constrained -->
 		</header> <!-- #header -->
 
-		<div id="content" role="main">
+		<div id="content" role="main"><div id="ribbon"><p>proudly<br>participating in<br><strong><a target="_blank" href="http://www.2mbetterfutures.org/">2MBETTERFUTURES</a></strong></p></div>
 			<div class="constrained">

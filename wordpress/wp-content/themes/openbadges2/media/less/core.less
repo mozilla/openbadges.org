@@ -49,8 +49,8 @@ h4 {
 }
 
 .text-hidden {
-	position: absolute;
-	left: -999em;
+	height: 0;
+	overflow: hidden;
 }
 
 .intro {
@@ -255,3 +255,36 @@ h4 {
 /* ===[ Components ]========================================================= */
 
 @import "_components";
+
+/* ===[ temporary ]========================================================== */
+#content {
+position:relative;
+}
+
+#ribbon {
+background-image: url("../images/ribbon.png");
+background-repeat:no-repeat;
+position:absolute;
+top:15px;
+left:0;
+width:146px;
+height:96px;
+padding-left:3px;
+}
+
+#ribbon p {
+font-size:.65em;
+line-height:1.4em;
+margin-top:1.35em;
+}
+
+#ribbon p strong {
+letter-spacing:-1px;
+}
+
+#ribbon a,
+#ribbon:visited,
+#ribbon:hover {
+text-decoration:none;
+color:#fff;
+}
