@@ -1,4 +1,5 @@
 <?php if (IS_AJAX) return; ?>
+<?php $stylesheetDir = get_stylesheet_directory_uri(); ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
@@ -6,9 +7,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
-		<link rel="icon" type="image/x-icon" href="./media/images/favicon.ico"/>
-		<link rel="icon" type="image/png" href="./media/images/favicon.png"/>
-		<!--[if lt IE 9]><script src="./media/js/html5shiv.js"></script><![endif]-->
+		<link rel="icon" type="image/x-icon" href="<?php echo $stylesheetDir; ?>/media/images/favicon.ico"/>
+		<link rel="icon" type="image/png" href="<?php echo $stylesheetDir; ?>/media/images/favicon.png"/>
+		<!--[if lt IE 9]><script src="<?php echo $stylesheetDir; ?>/media/js/html5shiv.js"></script><![endif]-->
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
