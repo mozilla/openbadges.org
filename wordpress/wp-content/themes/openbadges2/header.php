@@ -6,6 +6,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title><?php wp_title('|', true, 'right'); bloginfo('name'); ?></title>
+		<link rel="icon" type="image/x-icon" href="./media/images/favicon.ico"/>
+		<link rel="icon" type="image/png" href="./media/images/favicon.png"/>
 		<!--[if lt IE 9]><script src="./media/js/html5shiv.js"></script><![endif]-->
 		<?php wp_head(); ?>
 	</head>
