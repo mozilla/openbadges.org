@@ -13,16 +13,28 @@
     }
 
     $('#slides').slides({
-      start: startSlide
+      start: startSlide,
+      animationComplete: focusSlide
     });
     $().quiz({ 
       onWin: showWinPanel 
     });
     $('.fancybox').fancybox({
       closeBtn: true,
-      arrows: false
+      arrows: false,
+      afterShow: function(){
+	      $("#badges-101").attr("aria-hidden", false).attr("tabindex", 0);
+	      focusSlide();
+	      
+      },
+      afterClose: function(){},
     });
   });
+
+  function focusSlide(){
+  	$('#slides div.slide').attr("aria-hidden", false).attr("tabindex", -1);
+  	$('#slides div.slide:visible').attr("aria-hidden", false).attr("tabindex", 0).focus();
+  }
 
   function initWinPanel() {
     /* Badges 101 badge acceptance panel */
@@ -37,7 +49,7 @@
     $('#after-badge').hide();
     $('#push-to-backpack').one('click', function(){
       $('#nav-panel').hide();
-      $('#get-badge').fadeIn();
+      $('#get-badge').fadeIn(400, function(){$('#get-badge').attr("aria-hidden", false).attr("tabindex", 0).focus();});
     }); 
     
     $("#get-badge form").submit(function() {
@@ -95,5 +107,6 @@
   function showWinPanel(){
     $('#incomplete').hide();
     $('#win').show();
+    focusSlide();
   }
 })();

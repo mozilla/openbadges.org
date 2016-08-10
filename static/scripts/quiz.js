@@ -14,9 +14,12 @@
       $('.options', this).one('click', function(evt){
         if($(evt.target).hasClass('correct'))
           $('.answer', discussion).text("That's right!");
+          
         else 
           $('.answer', discussion).text("That's wrong!");
-        discussion.fadeIn();          
+        discussion.fadeIn(400, function(){
+	        discussion.attr("aria-hidden", false).attr("tabindex", 0).focus();
+        });          
         answered++;
         if (answered == questions) {
           win();
